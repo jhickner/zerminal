@@ -11,14 +11,14 @@ A terminal library for zig.
 
 WIP, needs docs.
 
-## including zerminal in your project
+## Including zerminal in your project
 ```zig
 // build.zig.zon
 .dependencies = .{
     .zerminal = .{
         .url = "https://github.com/jhickner/zerminal/archive/master.tar.gz",
-        // You can this blank initially, then plug in the hash you get from
-        // the `zig build` error.
+        // You can leave this blank initially, then plug in the hash you get 
+        // from the `zig build` error.
         .hash = "",
     },
 
@@ -27,7 +27,7 @@ const zerminal = b.dependency("zerminal", .{ .target = target, .optimize = optim
 exe.root_module.addImport("zerminal", zerminal.module("zerminal"));
 ```
 
-## basic usage
+## Basic usage
 ```zig
 const std = @import("std");
 const z = @import("zerminal");
